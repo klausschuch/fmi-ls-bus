@@ -223,22 +223,6 @@ To make sure that the `Rx_Data` variables is set properly, an importer has to ac
 
 _[Note: For clarity always a direct connection line between the `Tx_Clock` and `Rx_Clock` variables is shown in figures of this document.]_
 
-A `time-based` Clock can be `periodic` or `aperiodic`.
-Both allows to define Bus Communication Points independently from the regular communication points with fixed or variable distances.
-The difference between the two Clock types is listed in the following table.
-
-.Time-based Clock properties.
-[#table-tx-clock-properties]
-[cols="3,1,7"]
-|====
-h|Clock properties h|intervalVariability h|Description
-|`periodic`|`constant`|The Bus Communication Point interval is defined in the `modelDescription.xml`.
-|`periodic`|`fixed`|The Bus Communication Point interval is defined in the `modelDescription.xml` or must be provided in `Initialization Mode`.
-|`periodic`|`tunable`|The Bus Communication Point interval is defined in the `modelDescription.xml` or must be provided in `Initialization Mode` and can be changed in `Event Mode`.
-|`aperiodic`|`changing`|The Bus Communication Point interval must be provided in `Initialization Mode` and can be changed in `Event Mode` if this Clock ticked.
-|`aperiodic`|`countdown`|The Bus Communication Point interval must be provided in `Initialization Mode` and can be changed in every `Event Mode`.
-|====
-
 Network FMUs using a `time-based` `Tx_Clock` variable should set the Co-Simulation attribute `canHandleVariableCommunicationStepSize = "true"` in the model description file, since `fmi3DoStep` is typically called with variable `communicationStepSize`.
 
 ===== Triggered Tx Clock Variables [[low-cut-tx-triggered-clock-variables]]
