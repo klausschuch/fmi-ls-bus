@@ -210,7 +210,7 @@ image::low_cut_communication_points.svg[width=100%, align="center"]
 The announced Tx time however does not mean that a Bus Operation really has to be transferred, but that the connected networked FMUs should enter the `Event Mode` at that time.
 An importer has to determine proper communication step sizes to synchronize networked FMUs at the announced Tx time.
 
-_[Note: While simulation it can happen that no `Tx_Data` has to be transferred to the `Rx_Data` variable at the announced Tx time. In this case the returned 'valueSize' of the `Tx_Data` variable is 0.]_
+_[Note: It can happen that no `Tx_Data` has to be transferred to the `Rx_Data` variable at the announced Tx time. In this case the returned 'valueSize' of the `Tx_Data` variable is 0.]_
 
 Although the `causality` of a `time-based` `Tx_Clock` variable and a `triggered` `Rx_Clock` variable are each `input`, it is allowed to connect both, since a `time-based` Clock variable of an FMU is considered only to be a request to the importer to provide an attendant Clock source.
 
