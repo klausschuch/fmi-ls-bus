@@ -129,7 +129,7 @@ h|Behavior
 3+|The Header operation shall be provided by Network FMUs to initiate the transmission of a LIN header.
 In case of direct connected Network FMUs (see <<common-concepts-direct-communication>>), the FMU importer forwards the operation directly to the receiving Network FMUs.
 If a Bus Simulation is involved (see <<common-concepts-composition-with-dedicated-bus-simulation-fmu>> and <<common-concepts-importer-with-integrated-bus-simulation>>), the FMU importer forwards the operation initially to the Bus Simulation, where the operation is distributed with respect to the simulated bus behavior.
-Depending on the simulation details, the Bus Simulation might response with a <<low-cut-lin-bus-error-operation, `Bus Error`>> or <<low-cut-lin-format-error-operation, `Format Error`>> operation.
+The Bus Simulation might response with a <<low-cut-lin-bus-error-operation, `Bus Error`>> or <<low-cut-lin-format-error-operation, `Format Error`>> operation.
 
 |====
 
@@ -155,7 +155,7 @@ h|Behavior
 3+|The Response operation shall be provided by Network FMUs to initiate a response to a given LIN header.
 In case of direct connected Network FMUs (see <<common-concepts-direct-communication>>), the FMU importer forwards the operation directly to the receiving Network FMUs.
 If a Bus Simulation is involved (see <<common-concepts-composition-with-dedicated-bus-simulation-fmu>> and <<common-concepts-importer-with-integrated-bus-simulation>>), the FMU importer forwards the operation initially to the Bus Simulation, where the operation is distributed with respect to the simulated bus behavior.
-Depending on the simulation details, the Bus Simulation might response with a <<low-cut-lin-bus-error-operation, `Bus Error`>> or <<low-cut-lin-format-error-operation, `Format Error`>> operation.
+The Bus Simulation might response with a <<low-cut-lin-bus-error-operation, `Bus Error`>> or <<low-cut-lin-format-error-operation, `Format Error`>> operation.
 
 |====
 
@@ -179,7 +179,7 @@ h|Behavior
 3+|The Header Response operation shall be provided by Network FMUs to initiate the transmission of a LIN frame that contains the specified header and response.
 In case of direct connected Network FMUs (see <<common-concepts-direct-communication>>), the FMU importer forwards the operation directly to the receiving Network FMUs.
 If a Bus Simulation is involved (see <<common-concepts-composition-with-dedicated-bus-simulation-fmu>> and <<common-concepts-importer-with-integrated-bus-simulation>>), the FMU importer forwards the operation initially to the Bus Simulation, where the operation is distributed with respect to the simulated bus behavior.
-Depending on the simulation details, the Bus Simulation might response with a <<low-cut-lin-bus-error-operation, `Bus Error`>> or <<low-cut-lin-format-error-operation, `Format Error`>> operation.
+The Bus Simulation might response with a <<low-cut-lin-bus-error-operation, `Bus Error`>> or <<low-cut-lin-format-error-operation, `Format Error`>> operation.
 
 |====
 
