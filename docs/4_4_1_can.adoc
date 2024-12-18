@@ -268,8 +268,11 @@ The following applies for this operation: `Length = 12`.
 |The ID of the confirmed CAN message.
 
 h|Behavior
-3+|The specified operation shall be produced by the Bus Simulation and consumed by Network FMUs.
-If the configuration parameter <<low-cut-can-bus-notification-parameter, `BusNotifications`>> of a CAN Bus Terminal is set to `false` or omitted, the Network FMU does not wait for any responses from a Bus Simulation, i.e., potentially received <<low-cut-can-confirm-operation, `Confirm`>> operations are discarded by the Network FMU.
+3+|This operation shall be produced by the Bus Simulation and consumed by Network FMUs.
+
+Only Network FMUs with the corresponding optionally exposed <<low-cut-can-bus-notification-parameter, `BusNotifications`>> parameter set to `true` might wait for this operation.
+A Network FMU shall ignore this operation if it doesn't wait for this operation.
+
 Depending on the <<low-cut-can-status-operation, status>> of the specified Network FMU further restrictions for <<low-cut-can-confirm-operation, `Confirm`>> operations <<table-can-status-values, exist>>.
 
 |====
